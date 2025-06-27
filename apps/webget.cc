@@ -3,7 +3,7 @@
 
 #include <cstdlib>
 #include <iostream>
-
+#include <../libsponge/util/socket.hh>
 using namespace std;
 
 void get_URL(const string &host, const string &path) {
@@ -16,9 +16,21 @@ void get_URL(const string &host, const string &path) {
     // Then you'll need to print out everything the server sends back,
     // (not just one call to read() -- everything) until you reach
     // the "eof" (end of file).
-
-    cerr << "Function called: get_URL(" << host << ", " << path << ").\n";
-    cerr << "Warning: get_URL() has not been implemented yet.\n";
+    // 1。创建 socket
+    TCPSocket cliSocket = TCPSocket();
+    cliSocket.connect(Address(host, "http"));
+    string msg = "GET " + path + " HTTP/1.1\r\n" 
+        + "HOST: " + host + "\r\n" + "Connection: close\r\n\r\n";
+    cliSocket.write(msg);
+    string res = "";
+    while(true) {
+        string cur = cliSocket.read();
+        if (cur.empty()) break;
+        res += cur;
+    }
+    std::cout << res;
+    // cerr << "Function called: get_URL(" << host << ", " << path << ").\n";
+    // cerr << "Warning: get_URL() has not been implemented yet.\n";
 }
 
 int main(int argc, char *argv[]) {
