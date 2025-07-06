@@ -11,9 +11,21 @@ void DUMMY_CODE(Targs &&... /* unused */) {}
 using namespace std;
 
 void TCPReceiver::segment_received(const TCPSegment &seg) {
-    DUMMY_CODE(seg);
+    // 1. 取出 sn 查看是否超出窗口
+    // 2。 使用 sn 转换为绝对序列号
+    // 3. 将 data 存入 resemble 
+    if (!_isn.has_value()) {
+        if (seg.header().syn) {
+            _isn = WrappingInt32(seg.header().seqno);
+        } else {
+            return;
+        }
+    }
+    uint64_t absno = unwrap(seg.header().seqno, _isn.value(), _reassembler.stream_out().bytes_written());
+    _reassembler.push_substring(seg.payload().copy(), (seg.header().syn==true)?0:(absno-1) , seg.header().fin);
+    _ackno = wrap(_reassembler.stream_out().bytes_written() + (_reassembler.stream_out().input_ended()? 2 : 1), _isn.value());
 }
 
-optional<WrappingInt32> TCPReceiver::ackno() const { return {}; }
+optional<WrappingInt32> TCPReceiver::ackno() const { return _ackno; }
 
-size_t TCPReceiver::window_size() const { return {}; }
+size_t TCPReceiver::window_size() const { return _capacity-_reassembler.stream_out().buffer_size(); }
