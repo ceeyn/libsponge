@@ -1,17 +1,17 @@
-Start testing: Nov 07 00:05 UTC
+Start testing: Nov 07 00:20 UTC
 ----------------------------------------------------------
 25/168 Testing: t_byte_stream_construction
 25/168 Test: t_byte_stream_construction
 Command: "/sponge/build/tests/byte_stream_construction"
 Directory: /sponge/build
-"t_byte_stream_construction" start time: Nov 07 00:05 UTC
+"t_byte_stream_construction" start time: Nov 07 00:20 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_construction" end time: Nov 07 00:05 UTC
+"t_byte_stream_construction" end time: Nov 07 00:20 UTC
 "t_byte_stream_construction" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,14 +19,14 @@ Test Passed.
 26/168 Test: t_byte_stream_one_write
 Command: "/sponge/build/tests/byte_stream_one_write"
 Directory: /sponge/build
-"t_byte_stream_one_write" start time: Nov 07 00:05 UTC
+"t_byte_stream_one_write" start time: Nov 07 00:20 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_one_write" end time: Nov 07 00:05 UTC
+"t_byte_stream_one_write" end time: Nov 07 00:20 UTC
 "t_byte_stream_one_write" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,14 +34,14 @@ Test Passed.
 27/168 Test: t_byte_stream_two_writes
 Command: "/sponge/build/tests/byte_stream_two_writes"
 Directory: /sponge/build
-"t_byte_stream_two_writes" start time: Nov 07 00:05 UTC
+"t_byte_stream_two_writes" start time: Nov 07 00:20 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_two_writes" end time: Nov 07 00:05 UTC
+"t_byte_stream_two_writes" end time: Nov 07 00:20 UTC
 "t_byte_stream_two_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -49,14 +49,14 @@ Test Passed.
 28/168 Test: t_byte_stream_capacity
 Command: "/sponge/build/tests/byte_stream_capacity"
 Directory: /sponge/build
-"t_byte_stream_capacity" start time: Nov 07 00:05 UTC
+"t_byte_stream_capacity" start time: Nov 07 00:20 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.22 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_capacity" end time: Nov 07 00:06 UTC
+"t_byte_stream_capacity" end time: Nov 07 00:20 UTC
 "t_byte_stream_capacity" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -64,14 +64,14 @@ Test Passed.
 29/168 Test: t_byte_stream_many_writes
 Command: "/sponge/build/tests/byte_stream_many_writes"
 Directory: /sponge/build
-"t_byte_stream_many_writes" start time: Nov 07 00:06 UTC
+"t_byte_stream_many_writes" start time: Nov 07 00:20 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_many_writes" end time: Nov 07 00:06 UTC
+"t_byte_stream_many_writes" end time: Nov 07 00:20 UTC
 "t_byte_stream_many_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -79,32 +79,33 @@ Test Passed.
 30/168 Test: t_webget
 Command: "/sponge/tests/webget_t.sh"
 Directory: /sponge/build
-"t_webget" start time: Nov 07 00:06 UTC
+"t_webget" start time: Nov 07 00:20 UTC
 Output:
 ----------------------------------------------------------
-Function called: get_URL(cs144.keithw.org, /nph-hasher/xyzzy).
-Warning: get_URL() has not been implemented yet.
-ERROR: webget returned output that did not match the test's expectations
+HTTP/1.1 200 OK
+Content-type: text/plain
+
+7SmXqWkrLKzVBCEalbSPqBcvs11Pw263K7x4Wv3JckI
 <end of output>
-Test time =   0.03 sec
+Test time =   1.16 sec
 ----------------------------------------------------------
-Test Failed.
-"t_webget" end time: Nov 07 00:06 UTC
-"t_webget" time elapsed: 00:00:00
+Test Passed.
+"t_webget" end time: Nov 07 00:20 UTC
+"t_webget" time elapsed: 00:00:01
 ----------------------------------------------------------
 
 52/168 Testing: t_address_dt
 52/168 Test: t_address_dt
 Command: "/sponge/build/doctests/address_dt"
 Directory: /sponge/build
-"t_address_dt" start time: Nov 07 00:06 UTC
+"t_address_dt" start time: Nov 07 00:20 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.02 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"t_address_dt" end time: Nov 07 00:06 UTC
+"t_address_dt" end time: Nov 07 00:20 UTC
 "t_address_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -112,14 +113,14 @@ Test Passed.
 53/168 Test: t_parser_dt
 Command: "/sponge/build/doctests/parser_dt"
 Directory: /sponge/build
-"t_parser_dt" start time: Nov 07 00:06 UTC
+"t_parser_dt" start time: Nov 07 00:20 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_parser_dt" end time: Nov 07 00:06 UTC
+"t_parser_dt" end time: Nov 07 00:20 UTC
 "t_parser_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -127,15 +128,15 @@ Test Passed.
 54/168 Test: t_socket_dt
 Command: "/sponge/build/doctests/socket_dt"
 Directory: /sponge/build
-"t_socket_dt" start time: Nov 07 00:06 UTC
+"t_socket_dt" start time: Nov 07 00:20 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_socket_dt" end time: Nov 07 00:06 UTC
+"t_socket_dt" end time: Nov 07 00:20 UTC
 "t_socket_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 07 00:06 UTC
+End testing: Nov 07 00:20 UTC
