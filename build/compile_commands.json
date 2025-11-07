@@ -1,0 +1,222 @@
+[
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/byte_stream.cc.o -c /sponge/libsponge/byte_stream.cc",
+  "file": "/sponge/libsponge/byte_stream.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/stream_reassembler.cc.o -c /sponge/libsponge/stream_reassembler.cc",
+  "file": "/sponge/libsponge/stream_reassembler.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/tcp_helpers/tcp_header.cc.o -c /sponge/libsponge/tcp_helpers/tcp_header.cc",
+  "file": "/sponge/libsponge/tcp_helpers/tcp_header.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/tcp_helpers/tcp_segment.cc.o -c /sponge/libsponge/tcp_helpers/tcp_segment.cc",
+  "file": "/sponge/libsponge/tcp_helpers/tcp_segment.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/tcp_helpers/tcp_state.cc.o -c /sponge/libsponge/tcp_helpers/tcp_state.cc",
+  "file": "/sponge/libsponge/tcp_helpers/tcp_state.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/tcp_receiver.cc.o -c /sponge/libsponge/tcp_receiver.cc",
+  "file": "/sponge/libsponge/tcp_receiver.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/util/address.cc.o -c /sponge/libsponge/util/address.cc",
+  "file": "/sponge/libsponge/util/address.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/util/buffer.cc.o -c /sponge/libsponge/util/buffer.cc",
+  "file": "/sponge/libsponge/util/buffer.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/util/eventloop.cc.o -c /sponge/libsponge/util/eventloop.cc",
+  "file": "/sponge/libsponge/util/eventloop.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/util/file_descriptor.cc.o -c /sponge/libsponge/util/file_descriptor.cc",
+  "file": "/sponge/libsponge/util/file_descriptor.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/util/parser.cc.o -c /sponge/libsponge/util/parser.cc",
+  "file": "/sponge/libsponge/util/parser.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/util/socket.cc.o -c /sponge/libsponge/util/socket.cc",
+  "file": "/sponge/libsponge/util/socket.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/util/tun.cc.o -c /sponge/libsponge/util/tun.cc",
+  "file": "/sponge/libsponge/util/tun.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/util/util.cc.o -c /sponge/libsponge/util/util.cc",
+  "file": "/sponge/libsponge/util/util.cc"
+},
+{
+  "directory": "/sponge/build/libsponge",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/sponge.dir/wrapping_integers.cc.o -c /sponge/libsponge/wrapping_integers.cc",
+  "file": "/sponge/libsponge/wrapping_integers.cc"
+},
+{
+  "directory": "/sponge/build/apps",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/webget.dir/webget.cc.o -c /sponge/apps/webget.cc",
+  "file": "/sponge/apps/webget.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/recv_close.dir/recv_close.cc.o -c /sponge/tests/recv_close.cc",
+  "file": "/sponge/tests/recv_close.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/recv_transmit.dir/recv_transmit.cc.o -c /sponge/tests/recv_transmit.cc",
+  "file": "/sponge/tests/recv_transmit.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/recv_connect.dir/recv_connect.cc.o -c /sponge/tests/recv_connect.cc",
+  "file": "/sponge/tests/recv_connect.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/wrapping_integers_wrap.dir/wrapping_integers_wrap.cc.o -c /sponge/tests/wrapping_integers_wrap.cc",
+  "file": "/sponge/tests/wrapping_integers_wrap.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/wrapping_integers_unwrap.dir/wrapping_integers_unwrap.cc.o -c /sponge/tests/wrapping_integers_unwrap.cc",
+  "file": "/sponge/tests/wrapping_integers_unwrap.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/wrapping_integers_cmp.dir/wrapping_integers_cmp.cc.o -c /sponge/tests/wrapping_integers_cmp.cc",
+  "file": "/sponge/tests/wrapping_integers_cmp.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o -c /sponge/tests/byte_stream_capacity.cc",
+  "file": "/sponge/tests/byte_stream_capacity.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/spongechecks.dir/byte_stream_test_harness.cc.o -c /sponge/tests/byte_stream_test_harness.cc",
+  "file": "/sponge/tests/byte_stream_test_harness.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/tcp_parser.dir/tcp_parser.cc.o -c /sponge/tests/tcp_parser.cc",
+  "file": "/sponge/tests/tcp_parser.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/recv_special.dir/recv_special.cc.o -c /sponge/tests/recv_special.cc",
+  "file": "/sponge/tests/recv_special.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/recv_window.dir/recv_window.cc.o -c /sponge/tests/recv_window.cc",
+  "file": "/sponge/tests/recv_window.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/byte_stream_many_writes.dir/byte_stream_many_writes.cc.o -c /sponge/tests/byte_stream_many_writes.cc",
+  "file": "/sponge/tests/byte_stream_many_writes.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/fsm_stream_reassembler_cap.dir/fsm_stream_reassembler_cap.cc.o -c /sponge/tests/fsm_stream_reassembler_cap.cc",
+  "file": "/sponge/tests/fsm_stream_reassembler_cap.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/byte_stream_one_write.dir/byte_stream_one_write.cc.o -c /sponge/tests/byte_stream_one_write.cc",
+  "file": "/sponge/tests/byte_stream_one_write.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/wrapping_integers_roundtrip.dir/wrapping_integers_roundtrip.cc.o -c /sponge/tests/wrapping_integers_roundtrip.cc",
+  "file": "/sponge/tests/wrapping_integers_roundtrip.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/fsm_stream_reassembler_single.dir/fsm_stream_reassembler_single.cc.o -c /sponge/tests/fsm_stream_reassembler_single.cc",
+  "file": "/sponge/tests/fsm_stream_reassembler_single.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/fsm_stream_reassembler_seq.dir/fsm_stream_reassembler_seq.cc.o -c /sponge/tests/fsm_stream_reassembler_seq.cc",
+  "file": "/sponge/tests/fsm_stream_reassembler_seq.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/fsm_stream_reassembler_dup.dir/fsm_stream_reassembler_dup.cc.o -c /sponge/tests/fsm_stream_reassembler_dup.cc",
+  "file": "/sponge/tests/fsm_stream_reassembler_dup.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/fsm_stream_reassembler_holes.dir/fsm_stream_reassembler_holes.cc.o -c /sponge/tests/fsm_stream_reassembler_holes.cc",
+  "file": "/sponge/tests/fsm_stream_reassembler_holes.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/byte_stream_construction.dir/byte_stream_construction.cc.o -c /sponge/tests/byte_stream_construction.cc",
+  "file": "/sponge/tests/byte_stream_construction.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/fsm_stream_reassembler_many.dir/fsm_stream_reassembler_many.cc.o -c /sponge/tests/fsm_stream_reassembler_many.cc",
+  "file": "/sponge/tests/fsm_stream_reassembler_many.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/fsm_stream_reassembler_overlapping.dir/fsm_stream_reassembler_overlapping.cc.o -c /sponge/tests/fsm_stream_reassembler_overlapping.cc",
+  "file": "/sponge/tests/fsm_stream_reassembler_overlapping.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/recv_reorder.dir/recv_reorder.cc.o -c /sponge/tests/recv_reorder.cc",
+  "file": "/sponge/tests/recv_reorder.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/fsm_stream_reassembler_win.dir/fsm_stream_reassembler_win.cc.o -c /sponge/tests/fsm_stream_reassembler_win.cc",
+  "file": "/sponge/tests/fsm_stream_reassembler_win.cc"
+},
+{
+  "directory": "/sponge/build/tests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/byte_stream_two_writes.dir/byte_stream_two_writes.cc.o -c /sponge/tests/byte_stream_two_writes.cc",
+  "file": "/sponge/tests/byte_stream_two_writes.cc"
+},
+{
+  "directory": "/sponge/build/doctests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/parser_dt.dir/parser_dt.cc.o -c /sponge/doctests/parser_dt.cc",
+  "file": "/sponge/doctests/parser_dt.cc"
+},
+{
+  "directory": "/sponge/build/doctests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/socket_dt.dir/socket_dt.cc.o -c /sponge/doctests/socket_dt.cc",
+  "file": "/sponge/doctests/socket_dt.cc"
+},
+{
+  "directory": "/sponge/build/doctests",
+  "command": "/usr/bin/c++   -I/sponge/libsponge/util -I/sponge/libsponge/tcp_helpers -I/sponge/libsponge   -std=c++17 -g -pedantic -pedantic-errors -Werror -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Weffc++ -Wold-style-cast -O3 -DNDEBUG   -std=gnu++17 -o CMakeFiles/address_dt.dir/address_dt.cc.o -c /sponge/doctests/address_dt.cc",
+  "file": "/sponge/doctests/address_dt.cc"
+}
+]
