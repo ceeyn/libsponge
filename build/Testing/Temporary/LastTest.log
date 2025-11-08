@@ -1,17 +1,137 @@
-Start testing: Nov 07 00:20 UTC
+Start testing: Nov 08 13:17 UTC
 ----------------------------------------------------------
-25/168 Testing: t_byte_stream_construction
-25/168 Test: t_byte_stream_construction
-Command: "/sponge/build/tests/byte_stream_construction"
+17/168 Testing: t_strm_reassem_single
+17/168 Test: t_strm_reassem_single
+Command: "/sponge/build/tests/fsm_stream_reassembler_single"
 Directory: /sponge/build
-"t_byte_stream_construction" start time: Nov 07 00:20 UTC
+"t_strm_reassem_single" start time: Nov 08 13:17 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_construction" end time: Nov 07 00:20 UTC
+"t_strm_reassem_single" end time: Nov 08 13:17 UTC
+"t_strm_reassem_single" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/168 Testing: t_strm_reassem_seq
+18/168 Test: t_strm_reassem_seq
+Command: "/sponge/build/tests/fsm_stream_reassembler_seq"
+Directory: /sponge/build
+"t_strm_reassem_seq" start time: Nov 08 13:17 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"t_strm_reassem_seq" end time: Nov 08 13:17 UTC
+"t_strm_reassem_seq" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/168 Testing: t_strm_reassem_dup
+19/168 Test: t_strm_reassem_dup
+Command: "/sponge/build/tests/fsm_stream_reassembler_dup"
+Directory: /sponge/build
+"t_strm_reassem_dup" start time: Nov 08 13:17 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"t_strm_reassem_dup" end time: Nov 08 13:17 UTC
+"t_strm_reassem_dup" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/168 Testing: t_strm_reassem_holes
+20/168 Test: t_strm_reassem_holes
+Command: "/sponge/build/tests/fsm_stream_reassembler_holes"
+Directory: /sponge/build
+"t_strm_reassem_holes" start time: Nov 08 13:17 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"t_strm_reassem_holes" end time: Nov 08 13:17 UTC
+"t_strm_reassem_holes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/168 Testing: t_strm_reassem_many
+21/168 Test: t_strm_reassem_many
+Command: "/sponge/build/tests/fsm_stream_reassembler_many"
+Directory: /sponge/build
+"t_strm_reassem_many" start time: Nov 08 13:17 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.42 sec
+----------------------------------------------------------
+Test Passed.
+"t_strm_reassem_many" end time: Nov 08 13:17 UTC
+"t_strm_reassem_many" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/168 Testing: t_strm_reassem_overlapping
+22/168 Test: t_strm_reassem_overlapping
+Command: "/sponge/build/tests/fsm_stream_reassembler_overlapping"
+Directory: /sponge/build
+"t_strm_reassem_overlapping" start time: Nov 08 13:17 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"t_strm_reassem_overlapping" end time: Nov 08 13:17 UTC
+"t_strm_reassem_overlapping" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/168 Testing: t_strm_reassem_win
+23/168 Test: t_strm_reassem_win
+Command: "/sponge/build/tests/fsm_stream_reassembler_win"
+Directory: /sponge/build
+"t_strm_reassem_win" start time: Nov 08 13:17 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.51 sec
+----------------------------------------------------------
+Test Passed.
+"t_strm_reassem_win" end time: Nov 08 13:17 UTC
+"t_strm_reassem_win" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/168 Testing: t_strm_reassem_cap
+24/168 Test: t_strm_reassem_cap
+Command: "/sponge/build/tests/fsm_stream_reassembler_cap"
+Directory: /sponge/build
+"t_strm_reassem_cap" start time: Nov 08 13:17 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"t_strm_reassem_cap" end time: Nov 08 13:17 UTC
+"t_strm_reassem_cap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/168 Testing: t_byte_stream_construction
+25/168 Test: t_byte_stream_construction
+Command: "/sponge/build/tests/byte_stream_construction"
+Directory: /sponge/build
+"t_byte_stream_construction" start time: Nov 08 13:17 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"t_byte_stream_construction" end time: Nov 08 13:17 UTC
 "t_byte_stream_construction" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,14 +139,14 @@ Test Passed.
 26/168 Test: t_byte_stream_one_write
 Command: "/sponge/build/tests/byte_stream_one_write"
 Directory: /sponge/build
-"t_byte_stream_one_write" start time: Nov 07 00:20 UTC
+"t_byte_stream_one_write" start time: Nov 08 13:17 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_one_write" end time: Nov 07 00:20 UTC
+"t_byte_stream_one_write" end time: Nov 08 13:17 UTC
 "t_byte_stream_one_write" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,14 +154,14 @@ Test Passed.
 27/168 Test: t_byte_stream_two_writes
 Command: "/sponge/build/tests/byte_stream_two_writes"
 Directory: /sponge/build
-"t_byte_stream_two_writes" start time: Nov 07 00:20 UTC
+"t_byte_stream_two_writes" start time: Nov 08 13:17 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_two_writes" end time: Nov 07 00:20 UTC
+"t_byte_stream_two_writes" end time: Nov 08 13:17 UTC
 "t_byte_stream_two_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -49,14 +169,14 @@ Test Passed.
 28/168 Test: t_byte_stream_capacity
 Command: "/sponge/build/tests/byte_stream_capacity"
 Directory: /sponge/build
-"t_byte_stream_capacity" start time: Nov 07 00:20 UTC
+"t_byte_stream_capacity" start time: Nov 08 13:17 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.22 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_capacity" end time: Nov 07 00:20 UTC
+"t_byte_stream_capacity" end time: Nov 08 13:17 UTC
 "t_byte_stream_capacity" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -64,48 +184,29 @@ Test Passed.
 29/168 Test: t_byte_stream_many_writes
 Command: "/sponge/build/tests/byte_stream_many_writes"
 Directory: /sponge/build
-"t_byte_stream_many_writes" start time: Nov 07 00:20 UTC
+"t_byte_stream_many_writes" start time: Nov 08 13:17 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_byte_stream_many_writes" end time: Nov 07 00:20 UTC
+"t_byte_stream_many_writes" end time: Nov 08 13:17 UTC
 "t_byte_stream_many_writes" time elapsed: 00:00:00
-----------------------------------------------------------
-
-30/168 Testing: t_webget
-30/168 Test: t_webget
-Command: "/sponge/tests/webget_t.sh"
-Directory: /sponge/build
-"t_webget" start time: Nov 07 00:20 UTC
-Output:
-----------------------------------------------------------
-HTTP/1.1 200 OK
-Content-type: text/plain
-
-7SmXqWkrLKzVBCEalbSPqBcvs11Pw263K7x4Wv3JckI
-<end of output>
-Test time =   1.16 sec
-----------------------------------------------------------
-Test Passed.
-"t_webget" end time: Nov 07 00:20 UTC
-"t_webget" time elapsed: 00:00:01
 ----------------------------------------------------------
 
 52/168 Testing: t_address_dt
 52/168 Test: t_address_dt
 Command: "/sponge/build/doctests/address_dt"
 Directory: /sponge/build
-"t_address_dt" start time: Nov 07 00:20 UTC
+"t_address_dt" start time: Nov 08 13:17 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.04 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_address_dt" end time: Nov 07 00:20 UTC
+"t_address_dt" end time: Nov 08 13:17 UTC
 "t_address_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -113,14 +214,14 @@ Test Passed.
 53/168 Test: t_parser_dt
 Command: "/sponge/build/doctests/parser_dt"
 Directory: /sponge/build
-"t_parser_dt" start time: Nov 07 00:20 UTC
+"t_parser_dt" start time: Nov 08 13:17 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_parser_dt" end time: Nov 07 00:20 UTC
+"t_parser_dt" end time: Nov 08 13:17 UTC
 "t_parser_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -128,15 +229,15 @@ Test Passed.
 54/168 Test: t_socket_dt
 Command: "/sponge/build/doctests/socket_dt"
 Directory: /sponge/build
-"t_socket_dt" start time: Nov 07 00:20 UTC
+"t_socket_dt" start time: Nov 08 13:17 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"t_socket_dt" end time: Nov 07 00:20 UTC
+"t_socket_dt" end time: Nov 08 13:17 UTC
 "t_socket_dt" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 07 00:20 UTC
+End testing: Nov 08 13:17 UTC

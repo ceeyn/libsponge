@@ -21,6 +21,8 @@ cstdint
 -
 string
 -
+map
+-
 
 ../libsponge/util/util.hh
 algorithm

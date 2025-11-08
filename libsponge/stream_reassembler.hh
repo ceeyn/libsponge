@@ -5,22 +5,25 @@
 
 #include <cstdint>
 #include <string>
+#include <map>
 
 //! \brief A class that assembles a series of excerpts from a byte stream (possibly out of order,
 //! possibly overlapping) into an in-order byte stream.
 class StreamReassembler {
   private:
     // Your code here -- add private members as necessary.
-
-    ByteStream _output;  //!< The reassembled in-order byte stream
-    size_t _capacity;    //!< The maximum number of bytes
+    std::map<uint64_t, char> _buffer{};
+    bool _eof_flag{false};
+    uint64_t _eof_index{0};    
+    ByteStream _output;  //!< The reassembled in-order byte stream 应该是持有相关引用，用于将已经组装好的数据写入
+    size_t _capacity;    //!< The maximum number of bytes，capacity 限制了未组装好的数据的总和和已经组装好的数据的总和
 
   public:
     //! \brief Construct a `StreamReassembler` that will store up to `capacity` bytes.
     //! \note This capacity limits both the bytes that have been reassembled,
     //! and those that have not yet been reassembled.
+    // 123 234 456  right = 6 left = 1 first_unassembled = 1
     StreamReassembler(const size_t capacity);
-
     //! \brief Receive a substring and write any newly contiguous bytes into the stream.
     //!
     //! The StreamReassembler will stay within the memory limits of the `capacity`.
