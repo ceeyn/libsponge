@@ -1,243 +1,63 @@
-Start testing: Nov 08 13:17 UTC
+Start testing: Nov 09 13:38 UTC
 ----------------------------------------------------------
-17/168 Testing: t_strm_reassem_single
-17/168 Test: t_strm_reassem_single
-Command: "/sponge/build/tests/fsm_stream_reassembler_single"
+1/168 Testing: t_wrapping_ints_cmp
+1/168 Test: t_wrapping_ints_cmp
+Command: "/sponge/build/tests/wrapping_integers_cmp"
 Directory: /sponge/build
-"t_strm_reassem_single" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"t_strm_reassem_single" end time: Nov 08 13:17 UTC
-"t_strm_reassem_single" time elapsed: 00:00:00
-----------------------------------------------------------
-
-18/168 Testing: t_strm_reassem_seq
-18/168 Test: t_strm_reassem_seq
-Command: "/sponge/build/tests/fsm_stream_reassembler_seq"
-Directory: /sponge/build
-"t_strm_reassem_seq" start time: Nov 08 13:17 UTC
+"t_wrapping_ints_cmp" start time: Nov 09 13:38 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_strm_reassem_seq" end time: Nov 08 13:17 UTC
-"t_strm_reassem_seq" time elapsed: 00:00:00
+"t_wrapping_ints_cmp" end time: Nov 09 13:38 UTC
+"t_wrapping_ints_cmp" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-19/168 Testing: t_strm_reassem_dup
-19/168 Test: t_strm_reassem_dup
-Command: "/sponge/build/tests/fsm_stream_reassembler_dup"
+2/168 Testing: t_wrapping_ints_unwrap
+2/168 Test: t_wrapping_ints_unwrap
+Command: "/sponge/build/tests/wrapping_integers_unwrap"
 Directory: /sponge/build
-"t_strm_reassem_dup" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"t_strm_reassem_dup" end time: Nov 08 13:17 UTC
-"t_strm_reassem_dup" time elapsed: 00:00:00
-----------------------------------------------------------
-
-20/168 Testing: t_strm_reassem_holes
-20/168 Test: t_strm_reassem_holes
-Command: "/sponge/build/tests/fsm_stream_reassembler_holes"
-Directory: /sponge/build
-"t_strm_reassem_holes" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"t_strm_reassem_holes" end time: Nov 08 13:17 UTC
-"t_strm_reassem_holes" time elapsed: 00:00:00
-----------------------------------------------------------
-
-21/168 Testing: t_strm_reassem_many
-21/168 Test: t_strm_reassem_many
-Command: "/sponge/build/tests/fsm_stream_reassembler_many"
-Directory: /sponge/build
-"t_strm_reassem_many" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.42 sec
-----------------------------------------------------------
-Test Passed.
-"t_strm_reassem_many" end time: Nov 08 13:17 UTC
-"t_strm_reassem_many" time elapsed: 00:00:00
-----------------------------------------------------------
-
-22/168 Testing: t_strm_reassem_overlapping
-22/168 Test: t_strm_reassem_overlapping
-Command: "/sponge/build/tests/fsm_stream_reassembler_overlapping"
-Directory: /sponge/build
-"t_strm_reassem_overlapping" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"t_strm_reassem_overlapping" end time: Nov 08 13:17 UTC
-"t_strm_reassem_overlapping" time elapsed: 00:00:00
-----------------------------------------------------------
-
-23/168 Testing: t_strm_reassem_win
-23/168 Test: t_strm_reassem_win
-Command: "/sponge/build/tests/fsm_stream_reassembler_win"
-Directory: /sponge/build
-"t_strm_reassem_win" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.51 sec
-----------------------------------------------------------
-Test Passed.
-"t_strm_reassem_win" end time: Nov 08 13:17 UTC
-"t_strm_reassem_win" time elapsed: 00:00:00
-----------------------------------------------------------
-
-24/168 Testing: t_strm_reassem_cap
-24/168 Test: t_strm_reassem_cap
-Command: "/sponge/build/tests/fsm_stream_reassembler_cap"
-Directory: /sponge/build
-"t_strm_reassem_cap" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.06 sec
-----------------------------------------------------------
-Test Passed.
-"t_strm_reassem_cap" end time: Nov 08 13:17 UTC
-"t_strm_reassem_cap" time elapsed: 00:00:00
-----------------------------------------------------------
-
-25/168 Testing: t_byte_stream_construction
-25/168 Test: t_byte_stream_construction
-Command: "/sponge/build/tests/byte_stream_construction"
-Directory: /sponge/build
-"t_byte_stream_construction" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"t_byte_stream_construction" end time: Nov 08 13:17 UTC
-"t_byte_stream_construction" time elapsed: 00:00:00
-----------------------------------------------------------
-
-26/168 Testing: t_byte_stream_one_write
-26/168 Test: t_byte_stream_one_write
-Command: "/sponge/build/tests/byte_stream_one_write"
-Directory: /sponge/build
-"t_byte_stream_one_write" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"t_byte_stream_one_write" end time: Nov 08 13:17 UTC
-"t_byte_stream_one_write" time elapsed: 00:00:00
-----------------------------------------------------------
-
-27/168 Testing: t_byte_stream_two_writes
-27/168 Test: t_byte_stream_two_writes
-Command: "/sponge/build/tests/byte_stream_two_writes"
-Directory: /sponge/build
-"t_byte_stream_two_writes" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"t_byte_stream_two_writes" end time: Nov 08 13:17 UTC
-"t_byte_stream_two_writes" time elapsed: 00:00:00
-----------------------------------------------------------
-
-28/168 Testing: t_byte_stream_capacity
-28/168 Test: t_byte_stream_capacity
-Command: "/sponge/build/tests/byte_stream_capacity"
-Directory: /sponge/build
-"t_byte_stream_capacity" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.22 sec
-----------------------------------------------------------
-Test Passed.
-"t_byte_stream_capacity" end time: Nov 08 13:17 UTC
-"t_byte_stream_capacity" time elapsed: 00:00:00
-----------------------------------------------------------
-
-29/168 Testing: t_byte_stream_many_writes
-29/168 Test: t_byte_stream_many_writes
-Command: "/sponge/build/tests/byte_stream_many_writes"
-Directory: /sponge/build
-"t_byte_stream_many_writes" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"t_byte_stream_many_writes" end time: Nov 08 13:17 UTC
-"t_byte_stream_many_writes" time elapsed: 00:00:00
-----------------------------------------------------------
-
-52/168 Testing: t_address_dt
-52/168 Test: t_address_dt
-Command: "/sponge/build/doctests/address_dt"
-Directory: /sponge/build
-"t_address_dt" start time: Nov 08 13:17 UTC
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"t_address_dt" end time: Nov 08 13:17 UTC
-"t_address_dt" time elapsed: 00:00:00
-----------------------------------------------------------
-
-53/168 Testing: t_parser_dt
-53/168 Test: t_parser_dt
-Command: "/sponge/build/doctests/parser_dt"
-Directory: /sponge/build
-"t_parser_dt" start time: Nov 08 13:17 UTC
+"t_wrapping_ints_unwrap" start time: Nov 09 13:38 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_parser_dt" end time: Nov 08 13:17 UTC
-"t_parser_dt" time elapsed: 00:00:00
+"t_wrapping_ints_unwrap" end time: Nov 09 13:38 UTC
+"t_wrapping_ints_unwrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-54/168 Testing: t_socket_dt
-54/168 Test: t_socket_dt
-Command: "/sponge/build/doctests/socket_dt"
+3/168 Testing: t_wrapping_ints_wrap
+3/168 Test: t_wrapping_ints_wrap
+Command: "/sponge/build/tests/wrapping_integers_wrap"
 Directory: /sponge/build
-"t_socket_dt" start time: Nov 08 13:17 UTC
+"t_wrapping_ints_wrap" start time: Nov 09 13:38 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.02 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"t_socket_dt" end time: Nov 08 13:17 UTC
-"t_socket_dt" time elapsed: 00:00:00
+"t_wrapping_ints_wrap" end time: Nov 09 13:38 UTC
+"t_wrapping_ints_wrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 08 13:17 UTC
+4/168 Testing: t_wrapping_ints_roundtrip
+4/168 Test: t_wrapping_ints_roundtrip
+Command: "/sponge/build/tests/wrapping_integers_roundtrip"
+Directory: /sponge/build
+"t_wrapping_ints_roundtrip" start time: Nov 09 13:38 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"t_wrapping_ints_roundtrip" end time: Nov 09 13:38 UTC
+"t_wrapping_ints_roundtrip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 09 13:38 UTC
