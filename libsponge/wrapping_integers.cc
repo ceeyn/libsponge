@@ -35,25 +35,22 @@ WrappingInt32 wrap(uint64_t n, WrappingInt32 isn) {
 // checkpoint & 0xFFFFFFFF00000000 + (n - isn) % 2^32 + 2^32
 // checkpoint & 0xFFFFFFFF00000000 + (n - isn) % 2^32 - 2^32
 uint64_t unwrap(WrappingInt32 n, WrappingInt32 isn, uint64_t checkpoint) {
-    const uint32_t N = 1u << 32;
-    const uint64_t WINDOW = 1ULL << 32;
-    const uint64_t HALF   = 1ULL << 31;
-
-    // 计算 32 位内的偏移量：offset = (n - isn) mod 2^32
-    const uint32_t n_raw   = n.raw_value();
-    const uint32_t isn_raw = isn.raw_value();
-    const uint32_t offset  = static_cast<uint32_t>(n_raw - isn_raw); // 32 位环绕差
-
-    // 以 checkpoint 的高 32 位为基准对齐
-    uint64_t candidate = (checkpoint & ~0xFFFFFFFFULL) + offset;
-
-    // 距离超过半个窗口则向邻近窗口调整
-    if (candidate > checkpoint && candidate - checkpoint > HALF) {
-        // 避免下溢
-        if (candidate >= WINDOW) candidate -= WINDOW;
-    } else if (candidate < checkpoint && checkpoint - candidate > HALF) {
-        candidate += WINDOW;
+   uint64_t tmp =
+        (n.raw_value() >= isn.raw_value()) ? n.raw_value() - isn.raw_value() : (1ul<<32) - (isn.raw_value() - n.raw_value());
+    uint32_t dv = checkpoint / (1ul << 32);
+    uint64_t cnt1 = dv * (1ul << 32) + tmp;
+    uint64_t cnt2 = (dv - 1) * (1ul << 32) + tmp;
+    uint64_t cnt3 = (dv + 1) * (1ul << 32) + tmp;
+    uint64_t c1 = (checkpoint > cnt1) ? (checkpoint - cnt1) : (cnt1 - checkpoint);
+    uint64_t c2 = (checkpoint > cnt2) ? (checkpoint - cnt2) : (cnt2 - checkpoint);
+    uint64_t c3 = (checkpoint > cnt3) ? (checkpoint - cnt3) : (cnt3 - checkpoint);
+    if (c1 <= c2 && c1 <= c3) {
+        return cnt1;
     }
-
-    return candidate;
+    else if (c2 <= c1 && c2 <= c3){
+        return cnt2;
+    }
+    else{
+        return cnt3;
+    }
 }
