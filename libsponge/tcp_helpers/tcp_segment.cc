@@ -21,7 +21,15 @@ ParseResult TCPSegment::parse(const Buffer buffer, const uint32_t datagram_layer
     _payload = p.buffer();
     return p.get_error();
 }
+/**
+ * 为什么和 payload 有关
 
+- 序列号空间的目的是让 ACK 能统一表示“下一个期望字节的序列号”。这个空间既包含真实数据字节，也包含控制位（ SYN/FIN ）各自的一个单位。
+- 一个段可能同时携带 SYN 和数据（虽然不常见，但协议允许）。这时：
+  - SYN 占用 1 个序列号单位；
+  - 载荷中的每个字节各占用 1 个序列号单位；
+  - ACK 必须前进两者之和，这就是为什么和 payload 有关。
+ */
 size_t TCPSegment::length_in_sequence_space() const {
     return payload().str().size() + (header().syn ? 1 : 0) + (header().fin ? 1 : 0);
 }
