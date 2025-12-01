@@ -30,17 +30,12 @@ class TCPSender {
 
     //! the (absolute) sequence number for the next byte to be sent,
     uint64_t _next_seqno{0};
-    // 当前segment总共经历的时间
-    unsigned int _last_tick_total_time{0};
-    // 接收方窗口大小
-    uint16_t _window_size{0};
-    uint16_t _consecutive_retransmissions{0};
-    // 已发送但未确认的段
-    std::queue<TCPSegment> _outstanding_segments{};
-    // 已经确认的段，每次发送是从
-    uint64_t _ackno{0};
-    // 未确认的字节数
     size_t _bytes_in_flight{0};
+    std::queue<TCPSegment> _outstanding_segments{};
+    bool _fin_sent{false};
+    uint16_t _window_size{1};
+    unsigned int _consecutive_retransmissions{0};
+    unsigned int _timer{0};
 
   public:
     //! Initialize a TCPSender

@@ -190,6 +190,114 @@ stream_reassembler.cc.s:
 	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/stream_reassembler.cc.s
 .PHONY : stream_reassembler.cc.s
 
+tcp_connection.o: tcp_connection.cc.o
+
+.PHONY : tcp_connection.o
+
+# target to build an object file
+tcp_connection.cc.o:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_connection.cc.o
+.PHONY : tcp_connection.cc.o
+
+tcp_connection.i: tcp_connection.cc.i
+
+.PHONY : tcp_connection.i
+
+# target to preprocess a source file
+tcp_connection.cc.i:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_connection.cc.i
+.PHONY : tcp_connection.cc.i
+
+tcp_connection.s: tcp_connection.cc.s
+
+.PHONY : tcp_connection.s
+
+# target to generate assembly for a file
+tcp_connection.cc.s:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_connection.cc.s
+.PHONY : tcp_connection.cc.s
+
+tcp_helpers/fd_adapter.o: tcp_helpers/fd_adapter.cc.o
+
+.PHONY : tcp_helpers/fd_adapter.o
+
+# target to build an object file
+tcp_helpers/fd_adapter.cc.o:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/fd_adapter.cc.o
+.PHONY : tcp_helpers/fd_adapter.cc.o
+
+tcp_helpers/fd_adapter.i: tcp_helpers/fd_adapter.cc.i
+
+.PHONY : tcp_helpers/fd_adapter.i
+
+# target to preprocess a source file
+tcp_helpers/fd_adapter.cc.i:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/fd_adapter.cc.i
+.PHONY : tcp_helpers/fd_adapter.cc.i
+
+tcp_helpers/fd_adapter.s: tcp_helpers/fd_adapter.cc.s
+
+.PHONY : tcp_helpers/fd_adapter.s
+
+# target to generate assembly for a file
+tcp_helpers/fd_adapter.cc.s:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/fd_adapter.cc.s
+.PHONY : tcp_helpers/fd_adapter.cc.s
+
+tcp_helpers/ipv4_datagram.o: tcp_helpers/ipv4_datagram.cc.o
+
+.PHONY : tcp_helpers/ipv4_datagram.o
+
+# target to build an object file
+tcp_helpers/ipv4_datagram.cc.o:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/ipv4_datagram.cc.o
+.PHONY : tcp_helpers/ipv4_datagram.cc.o
+
+tcp_helpers/ipv4_datagram.i: tcp_helpers/ipv4_datagram.cc.i
+
+.PHONY : tcp_helpers/ipv4_datagram.i
+
+# target to preprocess a source file
+tcp_helpers/ipv4_datagram.cc.i:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/ipv4_datagram.cc.i
+.PHONY : tcp_helpers/ipv4_datagram.cc.i
+
+tcp_helpers/ipv4_datagram.s: tcp_helpers/ipv4_datagram.cc.s
+
+.PHONY : tcp_helpers/ipv4_datagram.s
+
+# target to generate assembly for a file
+tcp_helpers/ipv4_datagram.cc.s:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/ipv4_datagram.cc.s
+.PHONY : tcp_helpers/ipv4_datagram.cc.s
+
+tcp_helpers/ipv4_header.o: tcp_helpers/ipv4_header.cc.o
+
+.PHONY : tcp_helpers/ipv4_header.o
+
+# target to build an object file
+tcp_helpers/ipv4_header.cc.o:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/ipv4_header.cc.o
+.PHONY : tcp_helpers/ipv4_header.cc.o
+
+tcp_helpers/ipv4_header.i: tcp_helpers/ipv4_header.cc.i
+
+.PHONY : tcp_helpers/ipv4_header.i
+
+# target to preprocess a source file
+tcp_helpers/ipv4_header.cc.i:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/ipv4_header.cc.i
+.PHONY : tcp_helpers/ipv4_header.cc.i
+
+tcp_helpers/ipv4_header.s: tcp_helpers/ipv4_header.cc.s
+
+.PHONY : tcp_helpers/ipv4_header.s
+
+# target to generate assembly for a file
+tcp_helpers/ipv4_header.cc.s:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/ipv4_header.cc.s
+.PHONY : tcp_helpers/ipv4_header.cc.s
+
 tcp_helpers/tcp_header.o: tcp_helpers/tcp_header.cc.o
 
 .PHONY : tcp_helpers/tcp_header.o
@@ -216,6 +324,33 @@ tcp_helpers/tcp_header.s: tcp_helpers/tcp_header.cc.s
 tcp_helpers/tcp_header.cc.s:
 	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tcp_header.cc.s
 .PHONY : tcp_helpers/tcp_header.cc.s
+
+tcp_helpers/tcp_over_ip.o: tcp_helpers/tcp_over_ip.cc.o
+
+.PHONY : tcp_helpers/tcp_over_ip.o
+
+# target to build an object file
+tcp_helpers/tcp_over_ip.cc.o:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tcp_over_ip.cc.o
+.PHONY : tcp_helpers/tcp_over_ip.cc.o
+
+tcp_helpers/tcp_over_ip.i: tcp_helpers/tcp_over_ip.cc.i
+
+.PHONY : tcp_helpers/tcp_over_ip.i
+
+# target to preprocess a source file
+tcp_helpers/tcp_over_ip.cc.i:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tcp_over_ip.cc.i
+.PHONY : tcp_helpers/tcp_over_ip.cc.i
+
+tcp_helpers/tcp_over_ip.s: tcp_helpers/tcp_over_ip.cc.s
+
+.PHONY : tcp_helpers/tcp_over_ip.s
+
+# target to generate assembly for a file
+tcp_helpers/tcp_over_ip.cc.s:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tcp_over_ip.cc.s
+.PHONY : tcp_helpers/tcp_over_ip.cc.s
 
 tcp_helpers/tcp_segment.o: tcp_helpers/tcp_segment.cc.o
 
@@ -244,6 +379,33 @@ tcp_helpers/tcp_segment.cc.s:
 	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tcp_segment.cc.s
 .PHONY : tcp_helpers/tcp_segment.cc.s
 
+tcp_helpers/tcp_sponge_socket.o: tcp_helpers/tcp_sponge_socket.cc.o
+
+.PHONY : tcp_helpers/tcp_sponge_socket.o
+
+# target to build an object file
+tcp_helpers/tcp_sponge_socket.cc.o:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tcp_sponge_socket.cc.o
+.PHONY : tcp_helpers/tcp_sponge_socket.cc.o
+
+tcp_helpers/tcp_sponge_socket.i: tcp_helpers/tcp_sponge_socket.cc.i
+
+.PHONY : tcp_helpers/tcp_sponge_socket.i
+
+# target to preprocess a source file
+tcp_helpers/tcp_sponge_socket.cc.i:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tcp_sponge_socket.cc.i
+.PHONY : tcp_helpers/tcp_sponge_socket.cc.i
+
+tcp_helpers/tcp_sponge_socket.s: tcp_helpers/tcp_sponge_socket.cc.s
+
+.PHONY : tcp_helpers/tcp_sponge_socket.s
+
+# target to generate assembly for a file
+tcp_helpers/tcp_sponge_socket.cc.s:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tcp_sponge_socket.cc.s
+.PHONY : tcp_helpers/tcp_sponge_socket.cc.s
+
 tcp_helpers/tcp_state.o: tcp_helpers/tcp_state.cc.o
 
 .PHONY : tcp_helpers/tcp_state.o
@@ -271,6 +433,33 @@ tcp_helpers/tcp_state.cc.s:
 	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tcp_state.cc.s
 .PHONY : tcp_helpers/tcp_state.cc.s
 
+tcp_helpers/tuntap_adapter.o: tcp_helpers/tuntap_adapter.cc.o
+
+.PHONY : tcp_helpers/tuntap_adapter.o
+
+# target to build an object file
+tcp_helpers/tuntap_adapter.cc.o:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tuntap_adapter.cc.o
+.PHONY : tcp_helpers/tuntap_adapter.cc.o
+
+tcp_helpers/tuntap_adapter.i: tcp_helpers/tuntap_adapter.cc.i
+
+.PHONY : tcp_helpers/tuntap_adapter.i
+
+# target to preprocess a source file
+tcp_helpers/tuntap_adapter.cc.i:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tuntap_adapter.cc.i
+.PHONY : tcp_helpers/tuntap_adapter.cc.i
+
+tcp_helpers/tuntap_adapter.s: tcp_helpers/tuntap_adapter.cc.s
+
+.PHONY : tcp_helpers/tuntap_adapter.s
+
+# target to generate assembly for a file
+tcp_helpers/tuntap_adapter.cc.s:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_helpers/tuntap_adapter.cc.s
+.PHONY : tcp_helpers/tuntap_adapter.cc.s
+
 tcp_receiver.o: tcp_receiver.cc.o
 
 .PHONY : tcp_receiver.o
@@ -297,6 +486,33 @@ tcp_receiver.s: tcp_receiver.cc.s
 tcp_receiver.cc.s:
 	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_receiver.cc.s
 .PHONY : tcp_receiver.cc.s
+
+tcp_sender.o: tcp_sender.cc.o
+
+.PHONY : tcp_sender.o
+
+# target to build an object file
+tcp_sender.cc.o:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_sender.cc.o
+.PHONY : tcp_sender.cc.o
+
+tcp_sender.i: tcp_sender.cc.i
+
+.PHONY : tcp_sender.i
+
+# target to preprocess a source file
+tcp_sender.cc.i:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_sender.cc.i
+.PHONY : tcp_sender.cc.i
+
+tcp_sender.s: tcp_sender.cc.s
+
+.PHONY : tcp_sender.s
+
+# target to generate assembly for a file
+tcp_sender.cc.s:
+	cd /sponge/build && $(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/tcp_sender.cc.s
+.PHONY : tcp_sender.cc.s
 
 util/address.o: util/address.cc.o
 
@@ -557,18 +773,42 @@ help:
 	@echo "... stream_reassembler.o"
 	@echo "... stream_reassembler.i"
 	@echo "... stream_reassembler.s"
+	@echo "... tcp_connection.o"
+	@echo "... tcp_connection.i"
+	@echo "... tcp_connection.s"
+	@echo "... tcp_helpers/fd_adapter.o"
+	@echo "... tcp_helpers/fd_adapter.i"
+	@echo "... tcp_helpers/fd_adapter.s"
+	@echo "... tcp_helpers/ipv4_datagram.o"
+	@echo "... tcp_helpers/ipv4_datagram.i"
+	@echo "... tcp_helpers/ipv4_datagram.s"
+	@echo "... tcp_helpers/ipv4_header.o"
+	@echo "... tcp_helpers/ipv4_header.i"
+	@echo "... tcp_helpers/ipv4_header.s"
 	@echo "... tcp_helpers/tcp_header.o"
 	@echo "... tcp_helpers/tcp_header.i"
 	@echo "... tcp_helpers/tcp_header.s"
+	@echo "... tcp_helpers/tcp_over_ip.o"
+	@echo "... tcp_helpers/tcp_over_ip.i"
+	@echo "... tcp_helpers/tcp_over_ip.s"
 	@echo "... tcp_helpers/tcp_segment.o"
 	@echo "... tcp_helpers/tcp_segment.i"
 	@echo "... tcp_helpers/tcp_segment.s"
+	@echo "... tcp_helpers/tcp_sponge_socket.o"
+	@echo "... tcp_helpers/tcp_sponge_socket.i"
+	@echo "... tcp_helpers/tcp_sponge_socket.s"
 	@echo "... tcp_helpers/tcp_state.o"
 	@echo "... tcp_helpers/tcp_state.i"
 	@echo "... tcp_helpers/tcp_state.s"
+	@echo "... tcp_helpers/tuntap_adapter.o"
+	@echo "... tcp_helpers/tuntap_adapter.i"
+	@echo "... tcp_helpers/tuntap_adapter.s"
 	@echo "... tcp_receiver.o"
 	@echo "... tcp_receiver.i"
 	@echo "... tcp_receiver.s"
+	@echo "... tcp_sender.o"
+	@echo "... tcp_sender.i"
+	@echo "... tcp_sender.s"
 	@echo "... util/address.o"
 	@echo "... util/address.i"
 	@echo "... util/address.s"

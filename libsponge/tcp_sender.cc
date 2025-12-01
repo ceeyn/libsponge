@@ -22,134 +22,88 @@ TCPSender::TCPSender(const size_t capacity, const uint16_t retx_timeout, const s
     , _initial_retransmission_timeout{retx_timeout}
     , _stream(capacity) {}
 
- size_t TCPSender::bytes_in_flight() const { return _bytes_in_flight;; }
+ size_t TCPSender::bytes_in_flight() const { return _bytes_in_flight; }
 
 void TCPSender::fill_window() {
-    // 可用窗口：若对端通告为 0，允许发送一个字节（或 SYN）
-    const size_t window = _window_size > 0 ? _window_size : 1;
+    size_t current_window = _window_size > 0 ? _window_size : 1;
 
-    // 若当前已在飞字节已用满窗口，则不再发送
-    while (bytes_in_flight() < window) {
-        const bool need_syn = (_next_seqno == 0);
-        // 控制位占用（先只考虑 SYN；FIN 在载荷确定后再判断）
-        const size_t ctrl_cost_syn = need_syn ? 1 : 0;
-
-        // 剩余可用于载荷的窗口空间（扣除 SYN 的占用）
-        const size_t window_left_for_payload = window - bytes_in_flight() - ctrl_cost_syn;
-        if (window_left_for_payload == 0 && !need_syn) {
-            // 没空间放载荷且不需要 SYN，退出
-            break;
-        }
-
-        // 载荷最大不超过 MSS 和窗口剩余
-        const size_t payload_size = std::min(TCPConfig::MAX_PAYLOAD_SIZE, window_left_for_payload);
-        Buffer payload = stream_in().read(payload_size);
-
-        // 只有在输入结束且段总长度不越窗时才可附加 FIN
-        const bool can_fin = stream_in().eof() &&
-                             (bytes_in_flight() + ctrl_cost_syn + payload.size() + 1 /* FIN */ <= window);
-
-        // 若既没有载荷也不需要 SYN/FIN，说明没东西可发，退出
-        if (payload.size() == 0 && !need_syn && !can_fin) {
-            break;
-        }
-
-        // 构造并发送段
+    while (_bytes_in_flight < current_window) {
         TCPSegment seg;
-        seg.header().seqno = wrap(_next_seqno, _isn);
-        seg.header().syn = need_syn;
-        seg.header().fin = can_fin;
-        seg.payload() = std::move(payload);
+        if (_next_seqno == 0) {
+            seg.header().syn = true;
+        }
 
-        // 入发送队列与未确认队列
+        size_t payload_size =
+            std::min(TCPConfig::MAX_PAYLOAD_SIZE, current_window - _bytes_in_flight - seg.header().syn);
+        std::string payload = _stream.read(payload_size);
+        seg.payload() = Buffer(std::move(payload));
+
+        if (!_fin_sent && _stream.eof() && _bytes_in_flight + seg.length_in_sequence_space() < current_window) {
+            seg.header().fin = true;
+            _fin_sent = true;
+        }
+
+        if (seg.length_in_sequence_space() == 0) {
+            break;
+        }
+
+        if (_outstanding_segments.empty()) {
+            _timer = 0;
+        }
+
+        seg.header().seqno = wrap(_next_seqno, _isn);
         _segments_out.push(seg);
         _outstanding_segments.push(seg);
-
-        // 更新序列号与在飞字节
-        const size_t seg_len = seg.length_in_sequence_space();
-        _next_seqno += seg_len;
-        _bytes_in_flight += seg_len;
-
-        // 启动/重置定时器（首次有未确认段时）
-        if (_outstanding_segments.size() == 1) {
-            _last_tick_total_time = 0;
-        }
-
-        // 若窗口刚好用尽，退出循环
-        if (bytes_in_flight() >= window) {
-            break;
-        }
+        _next_seqno += seg.length_in_sequence_space();
+        _bytes_in_flight += seg.length_in_sequence_space();
     }
 }
 
-//! \param ackno The remote receiver's ackno (acknowledgment number)
-//! \param window_size The remote receiver's advertised window size
 void TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_size) {
-    const uint64_t ack_abs = unwrap(ackno, _isn, _next_seqno);
-
-    // 过滤无效 ACK：不可超过已发送的下一个序号
-    if (ack_abs > _next_seqno) {
-        return;
-    }
-    // 重复/过时 ACK：不推进前沿
-    if (ack_abs <= _ackno) {
-        _window_size = window_size;
+    uint64_t abs_ackno = unwrap(ackno, _isn, _next_seqno);
+    if (abs_ackno > _next_seqno) {
         return;
     }
 
-    // 有效 ACK：更新窗口与前沿
     _window_size = window_size;
-    _ackno = ack_abs;
 
-    bool progressed = false;
-    // 移除所有“已完全确认”的最早未确认段
+    bool acked_something = false;
     while (!_outstanding_segments.empty()) {
-        const TCPSegment &seg = _outstanding_segments.front();
-        const uint64_t seg_start = unwrap(seg.header().seqno, _isn, _next_seqno);
-        const uint64_t seg_end = seg_start + seg.length_in_sequence_space();
+        TCPSegment &seg = _outstanding_segments.front();
+        uint64_t seg_end_seqno = unwrap(seg.header().seqno, _isn, _next_seqno) + seg.length_in_sequence_space();
 
-        if (seg_end <= _ackno) {
+        if (abs_ackno >= seg_end_seqno) {
             _bytes_in_flight -= seg.length_in_sequence_space();
             _outstanding_segments.pop();
-            progressed = true;
+            acked_something = true;
         } else {
             break;
         }
     }
 
-    // 若确认前沿推进：重置定时器与退避计数
-    if (progressed) {
-        _last_tick_total_time = 0;
+    if (acked_something) {
+        _timer = 0;
         _consecutive_retransmissions = 0;
+        fill_window();
+    } else if (_outstanding_segments.empty()) {
+        _timer = 0;
     }
-
-    // 尝试继续填充窗口
-    fill_window();
 }
 
-//! \param[in] ms_since_last_tick the number of milliseconds since the last call to this method
 void TCPSender::tick(const size_t ms_since_last_tick) {
-    // 无未确认段：定时器不运行
     if (_outstanding_segments.empty()) {
         return;
     }
 
-    _last_tick_total_time += ms_since_last_tick;
+    _timer += ms_since_last_tick;
+    unsigned int current_rto = _initial_retransmission_timeout * (1 << _consecutive_retransmissions);
 
-    // 当前 RTO = 初始 RTO * 2^(连续重传次数)
-    const unsigned int rto_multiplier = 1u << _consecutive_retransmissions;
-    const unsigned int current_rto = _initial_retransmission_timeout * rto_multiplier;
-
-    if (_last_tick_total_time >= current_rto) {
-        // 超时：重传最早未确认段
-        const TCPSegment &seg = _outstanding_segments.front();
-        _segments_out.push(seg);
-
-        // 指数退避
-        _consecutive_retransmissions += 1;
-
-        // 重启定时器
-        _last_tick_total_time = 0;
+    if (_timer >= current_rto) {
+        _segments_out.push(_outstanding_segments.front());
+        if (_window_size > 0) {
+            _consecutive_retransmissions++;
+        }
+        _timer = 0;
     }
 }
 
