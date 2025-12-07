@@ -32,30 +32,24 @@ void TCPSender::fill_window() {
         if (_next_seqno == 0) {
             seg.header().syn = true;
         }
-
-        size_t payload_size =
-            std::min(TCPConfig::MAX_PAYLOAD_SIZE, current_window - _bytes_in_flight - seg.header().syn);
+        size_t payload_size = min(TCPConfig::MAX_PAYLOAD_SIZE, current_window - _bytes_in_flight);
         std::string payload = _stream.read(payload_size);
         seg.payload() = Buffer(std::move(payload));
-
-        if (!_fin_sent && _stream.eof() && _bytes_in_flight + seg.length_in_sequence_space() < current_window) {
+        if (!_fin_sent && _stream.eof() && (seg.length_in_sequence_space() + _bytes_in_flight < current_window)) {
             seg.header().fin = true;
             _fin_sent = true;
         }
-
         if (seg.length_in_sequence_space() == 0) {
             break;
         }
-
         if (_outstanding_segments.empty()) {
             _timer = 0;
         }
-
         seg.header().seqno = wrap(_next_seqno, _isn);
-        _segments_out.push(seg);
-        _outstanding_segments.push(seg);
         _next_seqno += seg.length_in_sequence_space();
         _bytes_in_flight += seg.length_in_sequence_space();
+        _outstanding_segments.push(seg);
+        _segments_out.push(seg);
     }
 }
 
