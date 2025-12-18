@@ -80,6 +80,9 @@ class TCPConnection {
     bool active() const;
     //!@}
 
+    //! \brief Transmit segments from the sender and receiver
+    void trans_segments();
+
     //! Construct a new connection from a configuration
     explicit TCPConnection(const TCPConfig &cfg) : _cfg{cfg} {}
 
