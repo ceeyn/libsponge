@@ -32,6 +32,14 @@ tcp_header.hh
 cstdint
 -
 
+../libsponge/tcp_helpers/tcp_state.hh
+tcp_receiver.hh
+../libsponge/tcp_helpers/tcp_receiver.hh
+tcp_sender.hh
+../libsponge/tcp_helpers/tcp_sender.hh
+string
+-
+
 ../libsponge/util/address.hh
 cstddef
 -
@@ -78,6 +86,12 @@ string
 utility
 -
 
+../libsponge/wrapping_integers.hh
+cstdint
+-
+ostream
+-
+
 /sponge/libsponge/byte_stream.hh
 string
 -
@@ -86,12 +100,42 @@ deque
 algorithm
 -
 
-/sponge/libsponge/tcp_sender.cc
-tcp_sender.hh
-/sponge/libsponge/tcp_sender.hh
+/sponge/libsponge/stream_reassembler.hh
+byte_stream.hh
+/sponge/libsponge/byte_stream.hh
+cstdint
+-
+string
+-
+map
+-
+
+/sponge/libsponge/tcp_connection.cc
+tcp_connection.hh
+/sponge/libsponge/tcp_connection.hh
+iostream
+-
+
+/sponge/libsponge/tcp_connection.hh
 tcp_config.hh
 /sponge/libsponge/tcp_config.hh
-random
+tcp_receiver.hh
+/sponge/libsponge/tcp_receiver.hh
+tcp_sender.hh
+/sponge/libsponge/tcp_sender.hh
+tcp_state.hh
+/sponge/libsponge/tcp_state.hh
+
+/sponge/libsponge/tcp_receiver.hh
+byte_stream.hh
+/sponge/libsponge/byte_stream.hh
+stream_reassembler.hh
+/sponge/libsponge/stream_reassembler.hh
+tcp_segment.hh
+/sponge/libsponge/tcp_segment.hh
+wrapping_integers.hh
+/sponge/libsponge/wrapping_integers.hh
+optional
 -
 
 /sponge/libsponge/tcp_sender.hh
@@ -106,11 +150,5 @@ wrapping_integers.hh
 functional
 -
 queue
--
-
-/sponge/libsponge/wrapping_integers.hh
-cstdint
--
-ostream
 -
 
